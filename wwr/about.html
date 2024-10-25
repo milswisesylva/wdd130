@@ -1,0 +1,99 @@
+
+<!--Page created 9/30/2024-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="The 'About Us' page for the rafting website.">
+    <meta name="author" content="Milson Sylvain">
+    <meta name="title" content="About Us">
+    
+    <!--Get Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Title and h-->
+    <link href="https://fonts.googleapis.com/css2?family=Denk+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!--Body-->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        
+    <title>Rafting Momentum About Us</title>
+    
+    <!--Get CSS-->
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <!--Get Header-->
+    <header>
+        <!--Get a div element for the header-->
+        <div class="grid-header-container">
+            <img src="images/logo.png" alt="Rafting site logo" width="200">
+            <!--Get class for the sub-grids-->
+            <nav class="grid-header-container-links">
+                <a href="index.html"    class="grid-header-container-subLink">Main Page</a>
+                <a href="about.html"    class="grid-header-container-subLink">About Us</a>
+                <a href="trips.html"    class="grid-header-container-subLink">Trip Planning</a>
+                <a href="contact.html"  class="grid-header-container-subLink">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!--Get Hero Banner-->
+        <div class="hero">
+            <img src="images/hero1.jpg" alt="Salmon Kayak Banner">
+            
+            <h1>Rafting Momentum</h1>
+            <article>
+                <!--Had to move the image before the h2-->
+                <img src="images/face.png" alt="Our Employees" width="220">
+                <h2>Our Commitment</h2><!--I had to add this because the Validation tool was saying that it needed a header within an article tag...-->
+                <p class="about-us-p">Rafting Momentum is committed to your experience; your "momentum." Rafting Momentum is the go-to river rafting experience for thousands of customers. We offer world-class guided rafting experiences along the Snake River and its tributaries ranging from Jackson Hole, Wyoming to Idaho Falls, Idaho.</p>
+            </article>
+        </div>
+        <!--This text should flow below the hero banner-->
+        <!--Get history class to match wireframe-->
+        <section class="history">
+            <h2>History</h2>
+            <!--Looks like an image is not necessary here though the wireframe shows an image-->
+            <p>Founded in 1999, Rafting Momentum has graced the pages of Time Magizine to the New York Times for its world-class experience and service. Our tours have hosted the most experienced river rafters to celebrities to first-time river adventurers. We hope you will choose us for your next excursion!</p>
+        </section>
+        <section class="our-experiences">
+            <h2>Adventure Awaits You!</h2>
+            <div class="our-experiences-images">
+                <figure>
+                    <img src="images/ex1.png" alt="our experiences" >
+                    <figcaption>Exciting Rapids!</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/ex2.png" alt="our experiences" >
+                    <figcaption>Rapids South of Grand Teton National Park</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/ex3.png" alt="our experiences" >
+                    <figcaption>Family Adventures</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/ex4.png" alt="our experiences" >
+                    <figcaption>Cresting Rapids</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/ex5.png" alt="our experiences" >
+                    <figcaption>Guided Tours</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="grid-footer-container">
+            <p>&copy; 2024 Rafting site | Milson Sylvain</p>
+            <nav class="socialLinks">
+                <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://twitter.com"><img src="images/tw.png" alt="twitter"></a>
+                <a href="https://www.instagram.com/"><img src="images/instagram.png" alt="Yahoo"></a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>

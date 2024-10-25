@@ -1,0 +1,662 @@
+
+
+/*Get globals*/
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+/*setting up global vars*/
+:root {
+    /*get colors*/
+    --col-main-backround        : #fefefe;
+    --col-primary               : #0E71A5;
+    --col-primary-background    : #083249df;
+    --col_secondary-background  : #010d11a2;
+    --col-secondary             : #7093A1;
+    --col-accent1               : #E8A635;
+    --col-accent2               : #282828;
+    --col-accent1_background    : #E8A63577;
+    
+    --col_p                     : #000;
+
+    /*get layout*/
+    /*Trip container*/
+    --img-trip-container-width  : 27.5em;
+    --img-journies-container-width : 20rem;
+
+    /*img*/
+    --img-std-width             : 150px;
+    --img-aside-width           : 200px;
+    --img-std-height            : auto;
+
+    /*Get box widths*/
+    --box-width                 : 100%;
+    --figure-width              : 13rem;
+
+    /*Contact Us Form*/
+    /*Get positioning for circular contact us images and captions*/
+    --margin-squeeze            : -1em;
+    --contact-us-width          : 512px;
+
+    --contact-us-input-size     : 24pt; /*Used for either height or width (both for radio buttons and checkboxes*/
+}
+
+/*MISC*/
+/*iframe must be styled here due to evaluation tool limitations*/
+iframe {border-radius: 1rem; border: 5px solid var(--col-accent1)}
+
+/*general sizing*/
+body {
+    padding : 10px;
+    background-color: #f4f7f9;
+
+    font-family: Sarabin, sans-serif; /*Set the general font family*/
+
+    font-size: 13pt;
+}
+
+/*header*/
+
+header{
+    /**/
+}
+
+/*Main Page*/
+
+/*Hero paragraph*/
+.hero .index-p {
+    position: absolute;
+    top : 10rem;
+    left : 5%;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-image: radial-gradient(var(--col-primary-background), #083249bc);
+    clear: both;
+
+    color: var(--col-main-backround);
+    text-shadow: 1px 1px var(--col-accent2);
+    font-size: 13pt;
+    border-radius: 1rem;
+    padding: 3rem;
+
+    text-align: justify;
+}
+
+/*Reserve Your Journey*/
+.reserve-your-journey {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+.reserve-your-journey p{
+    text-align: center;
+    margin: auto;
+    max-width: 66%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/*Trip container*/
+.trip-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 75%;
+    margin: auto;
+    margin-top: 1.5rem;
+    
+    border-top: 2px solid var(--col-primary);
+}
+
+/*submit button*/
+ 
+
+.trip-container-images a, .reserve-your-journey a, .questions-contact-us a {
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
+    color: var(--col-main-backround);
+}
+.trip-container-images a:link, .reserve-your-journey a:link, .questions-contact-us a:link{
+    display: inherit;
+    width: 21.75rem; /*Matches width of images*/
+    font-size: medium;
+    padding: 0.25rem;
+    border: 1px solid black;
+    background-color: var(--col-primary);
+    border-radius: 5px;
+    margin: auto;
+    display: inline-block;
+    
+}
+
+.trip-container-images a:hover, .reserve-your-journey a:hover, .questions-contact-us a:hover{
+    color: #E8A635;
+    border: 1px solid black;
+    background-color: var(--col-main-backround);
+    text-shadow: 1px 1px 0 var(--col-accent2);
+}
+
+.trip-container h2
+{
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+
+.trip-container-images
+{
+    display: flex;
+    justify-content:space-around ;
+    align-items:flex-start;
+    flex-wrap: wrap;
+}
+
+.trip-container figure > img {
+    width: var(--img-trip-container-width);
+    aspect-ratio: 1/1; /*trying this out*/
+    object-fit: cover;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+}
+
+/*Trip Planning*/
+
+.horizontal-border{
+    
+    border-top: 2px solid var(--col-primary);
+    width: 55%;
+    text-align: center;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.journies-container {
+    display: grid; 
+    grid-template-areas: 
+    'titles-grid titles-grid titles-grid titles-grid'
+    'titles-wyoming titles-wyoming separator-line titles-idaho'
+    'figures-wyoming figures-wyoming separator-line figures-idaho'
+    'figures-wyoming figures-wyoming separator-line figures-idaho'; 
+    justify-content: center;
+    column-gap: 0.5rem;
+    row-gap: 0.5rem;
+}
+
+.titles-grid{
+    grid-area: titles-grid;
+    justify-content: center;
+    font-size: x-large;
+}
+.titles-wyoming{ grid-area: titles-wyoming; } 
+.titles-idaho{ grid-area: titles-idaho; }
+.figures-wyoming{
+    grid-area: figures-wyoming;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.figures-idaho{
+    grid-area: figures-idaho;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.separator-line{
+    grid-area: separator-line;
+    border: 1px solid var(--col-primary);
+}
+
+.figures-wyoming img,
+.figures-idaho img {
+    width: var(--img-journies-container-width);
+    aspect-ratio: 1/1;
+    object-fit: cover;    
+    margin: 0.5rem;
+}
+.figures-wyoming figcaption,
+.figures-idaho figcaption
+{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    width: var(--img-journies-container-width);
+
+    height: 5rem;
+}
+.figures-wyoming figure,
+.figures-idaho figure
+{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 2px;
+    padding: 5px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+/*TODO*/
+/*Continue setting up the table*/
+table, th, tr, td {
+    border:1px solid black;
+    table-layout: auto;
+    column-width: 10rem;
+    width: auto;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    text-align: left;
+}
+
+th, td {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.questions-contact-us{
+    text-align: center;
+    padding: 0.5rem;
+}
+.questions-contact-us p {
+    margin: 0.5rem;
+}
+.questions-contact-us a {
+    text-decoration: none;
+}
+.questions-contact-us button{
+    margin: auto;
+}
+
+/*About Us*/
+/**/
+.grid-header-container{
+    display: grid;
+    grid-template-columns: minmax(var(--img-std-width),auto) 1fr; /*Set the image and links to be in a grid of 1 fractional unit*/
+    grid-gap: 1em;
+    background-color: var(--col-primary);
+    border: solid 0.5rem var(--col-accent1);
+}
+.grid-header-container > img {
+    display: flex;
+    align-items: flex-end;
+    width: 92px;
+}
+
+.grid-header-container > .grid-header-container-links
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+    margin: auto 24px auto auto;
+    align-items: center;
+}
+
+/*should remove underlines in the header links*/
+.grid-header-container-links > .grid-header-container-subLink
+{
+    text-decoration: none;
+    font-size:x-large;
+    color: var(--col-main-backround);
+    text-shadow: 1px 1px #000;
+}
+
+.grid-header-container-subLink {
+    border: 2px solid white;
+    padding: 5px;
+    text-align: center;
+}
+
+.grid-header-container-subLink:hover {
+    color: #E8A635;
+    background-color: var(--col-main-backround);
+}
+
+/*main*/
+main {
+    /**/
+}
+
+h1, h2, h3 {
+    font-family: "Denk One", sans-serif;
+    color: var(--col-accent2);
+    text-shadow: 1px 1px 0 var(--col-primary);
+}
+
+/*The hero banner*/
+/*Goal: To have the happy employee image and description text inside the hero image*/
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    overflow: scroll; /*scroll bars work!*/
+    overflow-x: hidden;
+    scroll-behavior:smooth;
+    background-color: var(--col-primary);
+}
+
+.hero img {
+    width: var(--box-width);
+    height: auto;
+}
+
+/*Looks good*/
+.hero h1 {
+    position: absolute;
+    top : 20px;
+    background-color: var(--col_secondary-background);
+    width: var(--box-width);
+    height: auto;
+    font-size: 3rem;
+    padding-bottom: 5px;
+    min-height: 50px;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-shadow: 1px 1px 0 var(--col-accent2);
+    color: var(--col-main-backround); 
+    z-index: 1;
+}
+
+.hero h2 {
+    color: #fff;
+    text-shadow: 1px 1px var(--col-accent2);
+    font-size: 150%;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.hero article {
+    position: absolute;
+    top : 100px;
+    left : 5%;
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    background-color: var(--col-primary-background);
+    clear: both;
+}
+
+/*happy employee within the hero image*/
+.hero article img {
+    position: relative;
+    float : right;
+    padding-left: 15px;
+    width: 25%;
+    height: auto;
+}/**/
+
+/*Hero paragraph*/
+.hero article .about-us-p {
+    color: var(--col-main-backround);
+    text-shadow: 1px 1px var(--col-accent2);
+    font-size: 13pt;
+    width: 75%;
+}
+
+/*This should flow below the hero banner*/
+main section {
+    position : relative;
+
+}
+
+/*The history section*/
+.history h2 {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/*Our experiences*/
+.our-experiences {
+    display: flex;
+    flex-direction: column;
+}
+
+.our-experiences h2
+{
+    text-align: center;
+    margin-top: 1.0rem;
+    margin-bottom: 0.5rem;
+}
+
+.our-experiences > .our-experiences-images
+{
+    display: flex;
+    justify-content:space-around ;
+    align-items:flex-start;
+    flex-wrap: wrap;
+}
+
+.our-experiences > .our-experiences-images > figure > img {
+    width: var(--figure-width);
+    aspect-ratio: 1/1; /*trying this out*/
+    object-fit: cover;
+
+}
+
+.our-experiences > .our-experiences-images > figure > figcaption {
+    text-align: center;
+    
+    height: auto;
+    width: var(--figure-width);
+    
+}
+
+
+/*Contact us classes*/
+.we-are-here-to-help {
+    display: flex;
+    flex-direction: column;
+    min-width: 512px;
+}
+
+.we-are-here-to-help h1{
+    font-size: 2.5rem;
+}
+
+.we-are-here-to-help h1, h2
+{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.we-are-here-to-help > .we-are-here-to-help-images
+{
+    display: flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    
+}
+
+.we-are-here-to-help > .we-are-here-to-help-images > figure > img {
+    width: var(--figure-width);
+    aspect-ratio: 1/1; /*trying this out*/
+    object-fit: cover;
+    margin-left: var(--margin-squeeze);
+    margin-right: var(--margin-squeeze);
+    border-radius: 50%; /*This is cool!*/
+    border: 5px solid var(--col-accent1);
+}
+
+/*z-index to display CEO on top*/
+.we-are-here-to-help-images > .employee1 {
+    z-index: -1;
+}
+.we-are-here-to-help-images > .employee2 {
+    z-index: -2;
+}
+.we-are-here-to-help-images > .employee3 {
+    z-index: -3;
+}
+
+.we-are-here-to-help > .we-are-here-to-help-images > figure > figcaption {
+    text-align: center;
+    
+    height: auto;
+    width: var(--figure-width);
+    margin-left: var(--margin-squeeze);
+    margin-right: var(--margin-squeeze);
+}
+
+
+
+/*the contact us form*/
+.form1{
+    max-width: var(--contact-us-width);
+    margin: 1rem auto 1rem auto;
+    padding: 1rem;
+    background-color: #e4eef2;
+    color: #000000;
+
+    border: 2px solid #000;
+    border-radius: 5px;
+
+    /*Use a serifed font to differentiate*/
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Use a monospaced font in the input fields*/
+.form1 input, textarea{
+    font-family: 'Courier New', Courier, monospace;
+}
+.form1 input {
+    height: 24px;
+}
+
+/*place all elements in the fieldset into a flex column*/
+.form1 fieldset{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: start;
+
+    padding: 0.75rem;
+
+    
+    border: none;
+}
+
+/*used for grid elements*/
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 0.25rem;
+    width: 100%;
+}
+
+/*align the first and last name side-by-side (this matches a nice contact us page sample)*/
+.contact-grid > .contact-name {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/*used for elements best indexed via flex (email)*/
+.contact-flex {
+    display: flex;
+    flex-direction: inherit;
+    width: 100%;
+}
+.contact-email, .contact-name {
+    margin-top: 0.5em;
+    margin-bottom : 0.5em;
+}
+
+.contact-reason{
+    padding-bottom: 0.25rem;
+}
+
+/*Radio buttons, checkboxes*/
+.contact-reason, .contact-newslestter-checkbox {
+    display: grid;
+    grid-template-columns: 1fr 100%;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+}
+.contact-reason input[type="radio"], .contact-newslestter-checkbox input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+/*text field*/
+.contact-website-suggestion {
+    grid-template-columns: 1fr; /*expand this column*/
+    margin-bottom: 0.5rem;
+}
+
+.contact-website-suggestion textarea {
+    resize: vertical;
+}
+
+/*submit button*/
+.form1 button{
+    
+    display: inherit;
+    margin: auto;
+    justify-content: center;
+    font-size: medium;
+    padding: 0.25rem;
+    min-width: 120px;
+}
+
+.form1 button:hover{
+    color: #E8A635;
+    background-color: var(--col-main-backround);
+    text-shadow: 1px 1px 0 var(--col-accent2);
+}
+
+.company-contact {
+    margin: .5rem auto 1rem auto;
+    text-align: center;
+}
+
+.company-contact h2 {
+    padding: 0.33rem;
+}
+
+.company-contact h3 {
+    padding: 0.33rem;
+}
+
+/*Set Footer*/
+footer{
+    position : relative;
+}
+
+/*grid of footer content*/
+.grid-footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+
+    margin-top: 1rem;
+}
+
+/*footer column 2*/
+.grid-footer-container > p {
+    justify-self:center;
+    grid-column-start: 2;
+}
+
+/*footer column 3*/
+.grid-footer-container > .socialLinks {
+    grid-column-start: 3;
+    justify-self: right;
+}
+/*Set image links to 1 EM-dash*/
+/*Remove any underline just in case*/
+.grid-footer-container > .socialLinks img {
+    width: 1em;
+    text-decoration: none;
+}

@@ -1,0 +1,154 @@
+
+<!--Page created 9/30/2024-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="the 'Contact Us' page for Rafting Site Momentum">
+    <meta name="author" content="Mils Sylvain">
+    <meta name="title" content="Contact Rafting Momentum">
+    
+    <!--Get Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--Title and h-->
+    <link href="https://fonts.googleapis.com/css2?family=Denk+One&family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!--Body-->
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+        
+    <title>Contact Rafting Momentum</title>
+    
+    <!--Get CSS-->
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+<body>
+    <!--Get Header-->
+    <header>
+        <!--Get a div element for the header-->
+        <div class="grid-header-container">
+            <img src="images/logo.png" alt="Rafting site logo" width="200">
+            <!--Get class for the sub-grids-->
+            <nav class="grid-header-container-links">
+                <a href="index.html"    class="grid-header-container-subLink">Main Page</a>
+                <a href="about.html"    class="grid-header-container-subLink">About Us</a>
+                <a href="trips.html"    class="grid-header-container-subLink">Trip Planning</a>
+                <a href="contact.html"  class="grid-header-container-subLink">Contact Us</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!--Display our employees-->
+        <section class="we-are-here-to-help">
+            <h1>For your Help</h1>
+            <div class="we-are-here-to-help-images">
+                <!--Get a z-index-->
+                <figure class="employee1">
+                    <img src="images/ms.jpg" alt="Mils W Sylvain" >
+                    <figcaption>Mils W Sylvain<br>Founder And Chief Executive</figcaption>
+                </figure>
+                <figure class="employee2">
+                    <img src="images/ben.jpg" alt="Benitho S " >
+                    <figcaption>Benitho Sylvain<br>Scheduling And Appointments</figcaption>
+                </figure>
+                <figure class="employee3">
+                    <img src="images/kes.jpg" alt="Kesnel SV" >
+                    <figcaption>Kesnel Sylvain<br>Head River Guide Coach</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!--Get user input-->
+        <section>
+            <h1> </h1>
+            <div class="form1">
+                <form>
+                    <fieldset>
+                        <legend>We're Happy To Hear From You!</legend>
+                        <!--Get first and last name and display as a grid-->
+                        <div class="contact-grid">
+                            <div class="contact-grid contact-name">
+                                <label for="name-first">First Name:</label>
+                                <input type="text" id="name-first" name="name-first">
+                            </div>
+                            <div class="contact-grid contact-name">
+                                <label for="name-last">Last Name:</label>
+                                <input type="text" id="name-last" name="name-last">
+                            </div>
+                        </div>
+
+                        <!--Get email and display as a flex-->
+                        <div class="contact-flex contact-email">
+                            <label for="useremail">Email:</label>
+                            <input type="text" id="useremail" name="useremail" placeholder="siteplanrafting@gmail.com">
+                        </div>
+                        
+                        <!--Get Radio buttons and display as a grid-->
+                        <p>Tell us the purpose of reaching out to us today.</p>
+                        <div class="contact-grid contact-reason">
+                            <!--Get reason-->
+                            <!--Need A new grid here for the radio buttons-->
+                            <input type="radio" id="general-inquiry" name="inquiry-purpose" value="HTML">
+                            <label for="general-inquiry">General Inquiry</label>
+                            <input type="radio" id="reservation-question" name="inquiry-purpose" value="CSS">
+                            <label for="reservation-question">Reservation Question</label>
+                            <input type="radio" id="website-suggestion" name="inquiry-purpose" value="JavaScript">
+                            <label for="website-suggestion">Website Suggestion</label>
+                        </div>
+                        
+                        <!--Get a website suggestion and display as a flex-->
+                        <div class="contact-grid contact-website-suggestion">
+                            <textarea id="w3review" name="w3review" rows="4" cols="80" placeholder="Type your contact explantion/inquiry here."></textarea>
+                        </div>
+                        
+                        <!--Get newsletter checkbox and display as inline-->
+                        <div class="contact-grid contact-newslestter-checkbox"> 
+                            <input type="checkbox" name="newsletter" id="newsletter" checked> <!--Create as checked-->
+                            <label for="newsletter">Subscribe to receive monthly newsletter</label>
+                            
+                        </div>
+                    </fieldset>
+                    <!--Get submit button-->
+                    <button type="submit" id="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!--Display company contact information-->
+        <section>
+            <div class="company-contact">
+                <h2>Company Information</h2>
+                <div class="company-contact-street">
+                    <h4>Street Address:</h4>
+                    <p>Rafting Momentum</p>
+                    <p>173 W Diamond St</p>
+                    <p>Phoenix AZ, GL. 89091</p>    
+                </div>
+                <div class="company-contact-phone-email">
+                    <p>&phone; (300) 352-3789</p>
+                    <p>Fax: (707) 452-4200</p>
+                    <p>email: <a href="mailto:inquiries@rafting-momentum.com"> inquiries@rafting-siteplan.com </a></p>
+                </div>
+                <div>
+                    <!--Map embedded per instructions; Some inline CSS used here... BAH! Can't do that...-->
+                    <h3>Find Us On The Map!</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8338.869055307641!2d-112.05407692353978!3d33.459387473386144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872b1208906fc38b%3A0x7293f43c42e7828d!2s1409%20E%20Diamond%20St%2C%20Phoenix%2C%20AZ%2085006!5e1!3m2!1sen!2sus!4v1729857567791!5m2!1sen!2sus" width="150" height="125" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>        
+
+    </main>
+    <footer>
+        <div class="grid-footer-container">
+            <p>&copy; 2024 Rafting Site | Milson Sylvain</p>
+            <nav class="socialLinks">
+                <a href="https://app.moqups.com/nihE8gw4k4ZnVgCxmiGmcsVRtq34bmJz/edit/page/ad64222d5">Wireframe</a>
+                <a href="https://www.facebook.com/"><img src="images/facebook.png" alt="Facebook"></a>
+                <a href="https://twitter.com"><img src="images/tw.png" alt="twitter"></a>
+                <a href="https://www.yahoo.com/"><img src="images/instagram.png" alt="instagram"></a>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
