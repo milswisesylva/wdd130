@@ -11,11 +11,11 @@
 :root {
     /*get colors*/
     --col-main-backround        : #fefefe;
-    --col-primary               : #0E71A5;
+    --col-primary               : rgb(83, 167, 201);
     --col-primary-background    : #083249df;
     --col_secondary-background  : #010d11a2;
     --col-secondary             : #7093A1;
-    --col-accent1               : #E8A635;
+    --col-accent1               : #e9cea0;
     --col-accent2               : #282828;
     --col-accent1_background    : #E8A63577;
     
@@ -59,7 +59,7 @@ body {
 
 /*header*/
 
-header{
+header {
     /**/
 }
 
